@@ -14,9 +14,9 @@ const Time = () => {
   }, []);
 
   return (
-    <div className="time-container">
-      <p className="time-text">The Current Time is: </p>
-      <div className="time">{time}</div>
+    <div className="container">
+      <p className="ti">Time: </p>
+      <div className="timer">{time}</div>
     </div>
   );
 };
