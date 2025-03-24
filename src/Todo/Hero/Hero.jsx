@@ -1,4 +1,4 @@
-import TodoInput from "../TodoInput";
+import TodoInput from "../Input";
 import useTasksStore from "../../store/taskStore";
 import now from "../../utils/now";
 
@@ -11,7 +11,7 @@ const Hero = () => {
   });
   return (
     <section className="hero">
-      <h3>Good {now()} User. Welcome to Joseph's TO-DO App </h3>
+      <h3>Good {now()}. Welcome to Joseph's TO-DO App </h3>
       <h2>Complete {incomplete} tasks today.</h2>
       <TodoInput />
     </section>

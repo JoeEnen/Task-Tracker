@@ -1,13 +1,13 @@
 import React from "react";
-import TodoItem from "./TodoItem";
+import Item from "./Tasks";
 import useTasksStore from "../store/taskStore";
 
-function TodoItems() {
+function Items() {
   const tasks = useTasksStore((state) => state.tasks);
   return (
     <section className="todo-items-container">
       {tasks.map((currentTask) => (
-        <TodoItem
+        <Item
           id={currentTask.id}
           key={currentTask.id}
           title={currentTask.taskTitle}
@@ -19,4 +19,4 @@ function TodoItems() {
   );
 }
 
-export default TodoItems;
+export default Items;

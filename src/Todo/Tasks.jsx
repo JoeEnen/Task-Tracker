@@ -32,7 +32,7 @@ function TodoItem({ id, title, description, complete }) {
           {complete ? `mark as incomplete` : `mark as done`}
         </button>
         <button className="delete-btn" onClick={handleDeleteTask}>
-          delete
+          Delete
         </button>
       </div>
     </div>
