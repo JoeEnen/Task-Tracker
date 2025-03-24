@@ -1,7 +1,7 @@
 .hero {
   min-height: 60vh;
   background:
-    linear-gradient(rgba(0, 0, 255, 0.4), rgba(0, 0, 0, .7)),
+    linear-gradient(rgba(0, 0, 0, 4)),
     url(../../assets/businessman.jpg);
   background-position: center;
   background-size: cover;
@@ -21,7 +21,7 @@ h2 {
 
 .hero h3 {
   font-size: 3rem;
-  background-color: #007bff;
+  background-color: #9ba4ad;
   padding: 0.5rem;
   border-radius: 8px;
   text-transform: capitalize;
