@@ -1,49 +1,30 @@
 import { create } from "zustand";
 import { devtools, persist } from "zustand/middleware";
-const tasksStore = (set) => ({
-  tasks: [],
 
-  addTask: (task) => {
-    set((previousState) => {
-      return { tasks: [task, ...previousState.tasks] };
-    });
-  },
+const useTasksStore = create(
+  devtools(
+    persist(
+      (set) => ({
+        tasks: [],
 
-  // addTask: (task) => {
-  //   set(() => {
-  //     return { tasks: [task] };
-  //   });
-  // },
+        addTask: (task) =>
+          set((state) => ({ tasks: [task, ...state.tasks] })),
 
-  completeTask: (taskId) => {
-    set((state) => {
-      const updatedTasks = state.tasks.map((currentTask) => {
-        if (currentTask.id == taskId) currentTask.completed = true;
-        return currentTask;
-      });
-      return { tasks: updatedTasks };
-    });
-  },
+        toggleTaskCompletion: (taskId, isCompleted) =>
+          set((state) => ({
+            tasks: state.tasks.map((task) =>
+              task.id === taskId ? { ...task, completed: isCompleted } : task
+            ),
+          })),
 
-  incompleteTask: (taskId) => {
-    set((state) => {
-      const updatedTasks = state.tasks.map((currentTask) => {
-        if (currentTask.id == taskId) currentTask.completed = false;
-        return currentTask;
-      });
-      return { tasks: updatedTasks };
-    });
-  },
+        deleteTask: (taskId) =>
+          set((state) => ({
+            tasks: state.tasks.filter((task) => task.id !== taskId),
+          })),
+      }),
+      { name: "tasks" }
+    )
+  )
+);
 
-  deleteTask: (taskId) => {
-    set((state) => {
-      const updatedTasks = state.tasks.filter(
-        (currentTask) => currentTask.id !== taskId,
-      );
-      return { tasks: updatedTasks };
-    });
-  },
-});
-
-const useTasksStore = create(devtools(persist(tasksStore, { name: "tasks" })));
 export default useTasksStore;
