@@ -36,17 +36,17 @@ const TodoInput = () => {
   };
 
   return (
-    <form className="todo-input-form">
+    <form className="todo-input">
       <input
         type="text"
-        placeholder="enter task title"
+        placeholder="Task title..."
         className="todo-text-input"
         ref={inputRef}
         value={taskTitle}
         onChange={handleChangeTaskTitle}
       />
       <textarea
-        placeholder="enter todo description"
+        placeholder="Todo description..."
         value={taskDescription}
         onChange={handleChangeTaskDescription}
       ></textarea>

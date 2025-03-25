@@ -5,7 +5,7 @@ import useTasksStore from "../store/taskStore";
 function Items() {
   const tasks = useTasksStore((state) => state.tasks);
   return (
-    <section className="todo-items-container">
+    <section className="todo-items">
       {tasks.map((currentTask) => (
         <Item
           id={currentTask.id}

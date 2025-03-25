@@ -1,105 +1,90 @@
-.hero {
+.heroe {
  display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; min-height: 60vh;
-  background-image: "../../assets/businessman.jpg"
-  ;
+  flex-direction: column; 
+  min-height: 60vh;
+  background-color: #00ff55;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  
   gap: 1.2rem;
 }
 
-.hero h3,
+.heroe h3,
 h2 {
-  color: #fff;
   text-align: center;
 }
-
-.hero h3 {
- border-radius: 5px;
+.heroe h2 {
   font-size: 3rem;
-  background-color: #9ba4ad;
-  padding: 0.7rem;
-  
-  text-transform: capitalize;
+  text-transform: uppercase;
 }
 
-.hero h2 {
+.heroe h3 {
   font-size: 5rem;
   text-transform: capitalize;
+  color: black;
 }
 
-.todo-input-form {
+
+
+.todo-input {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  margin-top: 3rem;
-  width: 40%;
+  gap: 1.3rem;
+  margin-top: 2rem; 
+  width: 30%;
 }
 
-@media screen and (max-width: 56.25em) {
-  .todo-input-form {
-    width: 100%;
-  }
-}
 
-.todo-text-input {
-  padding: 1rem;
+.todo-input input {
+  padding: 1rem 1.2rem;
+  font-size: 2rem;
   font-weight: 600;
+  font-family: 'Times New Roman', Times, serif;
+  border-radius: 5px;
 }
 
-.todo-text-input::placeholder {
-  text-transform: capitalize;
-}
 
-textarea {
-  resize: vertical;
+.todo-input textarea {
+
   padding: 1rem;
-  font-family: inherit;
-  font-weight: 500;
+  font-size: 2rem;
+  font-weight: 550;
+  font-family: 'Times New Roman', Times, serif;
+  border-radius: 5px;
 }
 
-textarea::placeholder {
-  font-weight: 500;
-  text-transform: capitalize;
-}
 
-.submit-btn {
+.todo-input button {
   display: inline-block;
-  padding: 1rem;
-  background-color: #00ff55;
+  padding: 1rem 1.5rem;
+  background-color: #0059ff;
   color: #fff;
   font-weight: 600;
   border: none;
   outline: none;
   border-radius: 10px;
+  font-size: 1.7rem;
 }
 
-.todo-items-container {
-  max-width: 1200px;
-  /* border: 2px solid red; */
+.todo-items {
+  max-width: 200rem;
   margin: 1rem auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(38rem, 1fr));
+  /*grid-template-columns: repeat(auto-fit, minmax(38rem, 1fr));*/
   justify-items: center;
-  row-gap: 3rem;
-  padding: 1rem;
-  margin-top: 5rem;
-}
+  row-gap: 2rem;
+  padding: 1.5rem;}
 
-.todo-item {
-  width: 38rem;
+.item {
+  width: 40rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  padding: 1rem;
+  gap: 2rem;
+  padding: 2rem;
   box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.75);
-  border-radius: 8px;
+  border-radius: 5px;
 }
 
 .todo-title {
@@ -110,26 +95,28 @@ textarea::placeholder {
   display: flex;
   gap: 1rem;
 }
+.delete-btn {
+  background-color: rgb(255, 0, 51) !important;
+  margin-left: 5rem;
+   
+}
+.complete {
+  text-decoration:solid;
+}
 
-.todo-item__controls button {
-  display: inline-block;
+.controlers {
+  display: flex;
   padding: 0.8rem;
   text-transform: capitalize;
-  background-color: #007bff;
+  background-color: #d9dde0;
   border: none;
   outline: none;
   border-radius: 5px;
   color: #fff;
   cursor: pointer;
+  gap: rem;
 }
-
-.delete-btn {
-  background-color: crimson !important;
+/*
+.qx {
+  background-color: #095996; 
 }
-
-.complete {
-  text-decoration: line-through;
-}
-
-/* .todo {display: flex;
-flex-direction: column;} */

@@ -22,13 +22,13 @@ function TodoItem({ id, title, description, complete }) {
   };
 
   return (
-    <div className="todo-item">
+    <div className="item">
       <h3 className={complete ? `todo-title complete` : `todo-title`}>
         {title}
       </h3>
       <p className={complete ? `complete` : ``}>{description}</p>
-      <div className="todo-item__controls">
-        <button onClick={complete ? handleMarkIncomplete : handleMarkAsDone}>
+      <div className="controlers">
+        <button className "qx" onClick={complete ? handleMarkIncomplete : handleMarkAsDone}>
           {complete ? `mark as incomplete` : `mark as done`}
         </button>
         <button className="delete-btn" onClick={handleDeleteTask}>
